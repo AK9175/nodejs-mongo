@@ -1,1 +1,1 @@
-worker : npm start
+web : supervisor index.js

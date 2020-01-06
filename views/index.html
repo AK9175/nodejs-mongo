@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>index</title>
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+        
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">
+                    <i class="glyphicon glyphicon-user"></i>
+                    My Library
+                </a>
+        
+                <ul class="nav navbar-nav">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/views/find">Find</a></li>
+                </ul>
+            </div>
+
+        </div>
+        </nav>
+</head>
+<body>
+    <div>
+        <form action="/" enctype="multipart/form-data" method="POST">
+        <div>
+            <input type="text" id="user" name="mongo" placeholder="Enter collection name">
+            <input type="text" id="name" name="User" spellcheck="true"  placeholder="Enter your Name">
+            <input type="number" id="phone" name="num"  placeholder="Enter your Number">
+            <input type="password" id="pwd" name="pass"  placeholder="Enter your password">
+            <label for="filePicker">Choose or drag a file:</label><br>
+            <input type="file" name="img" id="filePicker" >
+            <button type="submit" id="button">Go</button>
+        </div>
+        </form>
+        <br>
+    </div>
+</body>
+</html>

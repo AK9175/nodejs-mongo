@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>index</title>
+</head>
+<body>
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+        
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">
+                    <i class="glyphicon glyphicon-user"></i>
+                    My Library
+                </a>
+        
+                <ul class="nav navbar-nav">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/views/find">Find</a></li>
+                </ul>
+            </div>
+        </div>
+        </nav>
+        <div id="photo"></div>
+        <script>
+            
+        var list = <%-JSON.stringify(dbase)%>
+            console.log(list)
+                document.getElementById('photo').innerHTML = `
+                ${list.map((data)=>{
+                return `
+                <h1>${data.name}<h1>
+                <h2>${data.num}<h2>
+                <img style="width: 700px; height: 500px;" src="${data.image}" > 
+                `
+                })}`
+        </script>
+</body>
+</html>

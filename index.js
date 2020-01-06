@@ -30,7 +30,7 @@ app.get("/" , (req , res) => {
         var form = new formidable.IncomingForm();
         console.log("Lmao2")
         form.parse(req , (err , fields , files)=>{
-            res.send({files , fields})
+            res.send("Done sir")
            cloudinary.uploader.upload(files.img.path , (result)=>{
                 console.log(result)
                 console.log("Connected");

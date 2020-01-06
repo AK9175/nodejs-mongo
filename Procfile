@@ -1,1 +1,1 @@
-worker : supervisor index.js
+web : supervisor index.js
